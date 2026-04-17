@@ -1,0 +1,85 @@
+@layer components {
+  .home-hero-copy {
+    @apply mx-auto max-w-4xl;
+  }
+
+  .home-hero-title {
+    @apply text-h4 text-text-dark dark:text-white sm:text-h3 lg:text-[3.2rem] lg:leading-[1.12] xl:text-[3.5rem];
+  }
+
+  .home-hero-title-line {
+    @apply block;
+  }
+
+  .home-hero-title-line + .home-hero-title-line {
+    @apply mt-2;
+  }
+
+  .home-hero-subtitles {
+    @apply mx-auto mt-6 max-w-3xl space-y-3;
+  }
+
+  .home-hero-subtitle {
+    @apply m-0 text-base leading-8 text-text-dark/85 dark:text-white/85 md:text-lg;
+  }
+
+  .home-hero-lead {
+    @apply mx-auto mt-6 max-w-2xl rounded-2xl border border-border bg-white/80 px-6 py-4 text-sm font-semibold leading-7 text-primary shadow-sm dark:border-darkmode-border dark:bg-darkmode-light/80 dark:text-darkmode-primary md:text-base;
+  }
+
+  .home-hero-actions {
+    @apply mt-8 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center;
+  }
+
+  .home-hero-button {
+    @apply min-w-[220px] text-center;
+  }
+
+  .home-hero-image {
+    @apply w-full;
+  }
+
+  .home-feature-image {
+    @apply mx-auto;
+  }
+
+  .home-feature-title {
+    @apply mb-4 text-h3 text-text-dark dark:text-white lg:text-h2;
+  }
+
+  .home-feature-subtitle {
+    @apply mb-6 text-lg font-semibold leading-8 text-text-dark dark:text-white;
+  }
+
+  .home-feature-body {
+    @apply space-y-4;
+  }
+
+  .home-feature-body p {
+    @apply m-0 text-base leading-8 text-text dark:text-darkmode-text;
+  }
+
+  .home-feature-solution {
+    @apply mt-8 inline-flex rounded-2xl border border-primary/15 bg-primary/8 px-4 py-3 text-sm font-semibold leading-6 text-primary dark:border-darkmode-primary/25 dark:bg-darkmode-primary/12 dark:text-darkmode-primary;
+  }
+
+  .home-feature-points {
+    @apply mt-6 space-y-4;
+  }
+
+  .home-feature-point {
+    @apply relative pl-8 text-base leading-7 text-text-dark dark:text-white;
+  }
+
+  .home-feature-point-icon {
+    @apply absolute left-0 top-1.5 text-primary dark:text-darkmode-primary;
+  }
+
+  .home-feature-actions {
+    @apply mt-8;
+  }
+
+  .home-feature-button {
+    @apply text-center;
+  }
+}
