@@ -29,7 +29,7 @@
                     {{ if $button.enable }}
                       <a
                         class="btn home-hero-button {{ if eq $index 0 }}btn-primary{{ else }}btn-outline-primary{{ end }}"
-                        href="{{ $button.link | absURL }}"
+                        href="{{ if strings.HasPrefix $button.link `http` }}{{ $button.link }}{{ else }}{{ strings.TrimPrefix `/` $button.link | relLangURL }}{{ end }}"
                         {{ if strings.HasPrefix $button.link `http` }}
                           target="_blank" rel="noopener"
                         {{ end }}>
@@ -93,7 +93,7 @@
             {{ with $feature.button }}
               {{ if .enable }}
                 <div class="home-feature-actions">
-                  <a class="btn btn-primary home-feature-button" href="{{ .link | absURL }}">
+                  <a class="btn btn-primary home-feature-button" href="{{ if strings.HasPrefix .link `http` }}{{ .link }}{{ else }}{{ strings.TrimPrefix `/` .link | relLangURL }}{{ end }}">
                     {{ .label }}
                     <i class="fa fa-arrow-right pl-2"></i>
                   </a>

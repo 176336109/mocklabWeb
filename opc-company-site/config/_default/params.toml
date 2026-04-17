@@ -27,7 +27,13 @@ google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
 custom_script = ""
 # copyright
-copyright = "Designed & Developed by [Zeon Studio](https://zeon.studio)"
+copyright = "© 2025 南宁云游墨客网络科技有限公司. 保留所有权利。"
+
+[compliance]
+icp_text = "桂ICP备2021004762号"
+icp_link = "https://beian.miit.gov.cn/"
+public_security_text = "桂公网安备45010802000821"
+public_security_link = "https://beian.mps.gov.cn/#/query/webSearch?code=45010802000821"
 
 # Preloader
 # preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader

@@ -5,15 +5,16 @@ banner:
   title_lines:
     - "创业缺技术・企业转型难"
   subtitle_lines:
-    - "MVP 快速落地・AI 数字化落地・不占股・不养团队"
+    - "to创业者：我们帮你快速建立MVP、验证业务、不占股、不养团队，精益创业"
+    - "to传统企业：从了解你，到帮你找到AI时代属于你的解"
   lead: "专注早期创业技术陪跑与传统企业 AI 构建"
   image: "/images/banner.png"
   buttons:
     - enable: true
-      label: "技术陪跑"
+      label: "精益创业、技术陪跑"
       link: "/services/technical-co-running/"
     - enable: true
-      label: "企业 AI 转型"
+      label: "利旧顺势、企业AI转型"
       link: "/services/agent-transformation/"
 features:
   - title: "创业别先养技术团队"
