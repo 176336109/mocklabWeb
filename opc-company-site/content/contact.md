@@ -1,14 +1,12 @@
 ---
 title: "联系我们"
-description: "欢迎联系 Mocklab(OPC)，沟通创业 MVP 技术陪跑、企业 AI Agent 与数字化升级需求。"
+description: "欢迎联系云游墨客，聊聊你的需求"
 image: "images/call-to-action.png"
 date: 2026-04-17T00:00:00Z
 draft: false
 ---
 
-感谢您对我们提供的技术输出与专属企业 Agent 数字化能力感兴趣！
-
-作为一名技术驱动的高净值独立工作者，我将直接与您对接并深入您的业务诉求。
+新纪元有新玩法，精益创业和转型是接下来10年的趋势。
 
 ### 我们的服务一览：
 

@@ -2,10 +2,10 @@ main:
   - name: "首页"
     url: "/"
     weight: 1
-  - name: "技术陪跑"
+  - name: "精益创业"
     url: "/services/technical-co-running/"
     weight: 2
-  - name: "企业 AI"
+  - name: "精益转型"
     url: "/services/agent-transformation/"
     weight: 3
   - name: "联系我们"

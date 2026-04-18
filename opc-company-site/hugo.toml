@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Mocklab(OPC)"
+title = "云游墨客"
 theme = "hugo-up-business"
 timeZone = "Asia/Shanghai"
 summaryLength = 20
