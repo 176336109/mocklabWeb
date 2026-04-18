@@ -1,12 +1,12 @@
 description: "创业技术陪跑与企业 AI 转型落地。面向初创团队提供 MVP 技术陪跑，面向传统企业提供 AI Agent 与流程自动化升级。"
 images:
-  - "images/banner.png"
+  - "images/up-business/hero-image.png"
 logo: "images/logo.png"
 favicon: "images/favicon.png"
 
 colors:
-  primary: "#0f766e"
-  secondary: "#ea580c"
+  primary: "#5d57a3"
+  secondary: "#d33a77"
   tertiary: "#e0f2fe"
 
 location:

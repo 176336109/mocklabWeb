@@ -1,10 +1,10 @@
-<nav class="border-primary/10 bg-white/95 sticky top-0 z-50 border-b backdrop-blur">
-  <div class="container mx-auto flex items-center justify-between px-4 py-5">
+<nav class="">
+  <div class="container mx-auto flex items-center justify-between px-4 py-6">
     <a class="flex items-center gap-3" href="{{ site.Home.RelPermalink }}">
-      {{ with site.Params.logo }}
-        {{ partial "utilities/image.html" (dict "src" . "alt" site.Title "class" "h-9 w-auto") }}
+      {{ with site.Params.favicon }}
+        {{ partial "utilities/image.html" (dict "src" . "alt" site.Title "class" "size-7 xl:size-8 rounded-sm" "loading" "eager") }}
       {{ end }}
-      <span class="text-primary text-lg font-semibold uppercase xl:text-2xl">{{ site.Title }}</span>
+      <span class="text-primary text-xl font-semibold uppercase tracking-tight xl:text-3xl">{{ site.Title }}</span>
     </a>
     <button
       class="text-primary cursor-pointer xl:hidden"
@@ -19,12 +19,12 @@
       class="fixed inset-0 flex -translate-y-full flex-col items-center justify-center gap-8 bg-white duration-500 xl:relative xl:translate-y-0 xl:flex-row xl:bg-transparent"
       id="navbarContent"
     >
-      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-5 xl:hidden">
+      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-6 xl:hidden">
         <a class="flex items-center gap-3" href="{{ site.Home.RelPermalink }}">
-          {{ with site.Params.logo }}
-            {{ partial "utilities/image.html" (dict "src" . "alt" site.Title "class" "h-9 w-auto") }}
+          {{ with site.Params.favicon }}
+            {{ partial "utilities/image.html" (dict "src" . "alt" site.Title "class" "size-7 rounded-sm" "loading" "eager") }}
           {{ end }}
-          <span class="text-primary text-lg font-semibold uppercase">{{ site.Title }}</span>
+          <span class="text-primary text-xl font-semibold uppercase tracking-tight">{{ site.Title }}</span>
         </a>
         <button
           class="text-primary cursor-pointer"
@@ -40,7 +40,7 @@
         {{ range site.Menus.main }}
           <li class="text-center">
             <a
-              class="text-primary hover:text-secondary text-base font-medium duration-300"
+              class="text-primary/95 hover:text-secondary text-base font-medium duration-300"
               href="{{ if or (strings.HasPrefix .URL `http`) (strings.HasPrefix .URL `#`) }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
             >
               {{ .Name }}
