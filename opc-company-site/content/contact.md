@@ -1,10 +1,10 @@
 ---
 title: "联系我们"
+description: "欢迎联系 Mocklab(OPC)，沟通创业 MVP 技术陪跑、企业 AI Agent 与数字化升级需求。"
+image: "images/call-to-action.png"
 date: 2026-04-17T00:00:00Z
 draft: false
 ---
-
-# 联系我们
 
 感谢您对我们提供的技术输出与专属企业 Agent 数字化能力感兴趣！
 

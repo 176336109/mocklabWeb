@@ -1,0 +1,22 @@
+enable: true
+
+items:
+  - image: "images/service-1.png"
+    pretitle: "面向初创团队"
+    title: "从想法到 MVP，先跑通业务，再决定是否扩团队"
+    text: "我们不占股、不要求你先养整支技术团队，而是用资深产品与技术能力，帮你在可控预算内完成 MVP 搭建、验证市场与平稳交接。"
+    buttons:
+      - label: "查看技术陪跑"
+        link: "/services/technical-co-running/"
+      - label: "联系咨询"
+        link: "/contact/"
+
+  - image: "images/service-2.png"
+    pretitle: "面向传统企业"
+    title: "不拆旧系统，给现有业务补上 AI Agent 与自动化能力"
+    text: "从业务痛点调研到方案设计，再到 Agent 构建、流程自动化与落地迭代，我们优先做低风险、见效快、能真正融入现有流程的升级。"
+    buttons:
+      - label: "查看企业 AI 服务"
+        link: "/services/agent-transformation/"
+      - label: "预约沟通"
+        link: "/contact/"

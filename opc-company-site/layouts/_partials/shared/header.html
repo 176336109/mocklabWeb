@@ -1,0 +1,62 @@
+<nav class="border-primary/10 bg-white/95 sticky top-0 z-50 border-b backdrop-blur">
+  <div class="container mx-auto flex items-center justify-between px-4 py-5">
+    <a class="flex items-center gap-3" href="{{ site.Home.RelPermalink }}">
+      {{ with site.Params.logo }}
+        {{ partial "utilities/image.html" (dict "src" . "alt" site.Title "class" "h-9 w-auto") }}
+      {{ end }}
+      <span class="text-primary text-lg font-semibold uppercase xl:text-2xl">{{ site.Title }}</span>
+    </a>
+    <button
+      class="text-primary cursor-pointer xl:hidden"
+      type="button"
+      data-toggle-target="#navbarContent"
+      data-toggle-class="-translate-y-full"
+      aria-label="切换导航"
+    >
+      {{ partial "heroicons/bars-4.html" }}
+    </button>
+    <div
+      class="fixed inset-0 flex -translate-y-full flex-col items-center justify-center gap-8 bg-white duration-500 xl:relative xl:translate-y-0 xl:flex-row xl:bg-transparent"
+      id="navbarContent"
+    >
+      <div class="container absolute top-0 mx-auto flex items-center justify-between px-4 py-5 xl:hidden">
+        <a class="flex items-center gap-3" href="{{ site.Home.RelPermalink }}">
+          {{ with site.Params.logo }}
+            {{ partial "utilities/image.html" (dict "src" . "alt" site.Title "class" "h-9 w-auto") }}
+          {{ end }}
+          <span class="text-primary text-lg font-semibold uppercase">{{ site.Title }}</span>
+        </a>
+        <button
+          class="text-primary cursor-pointer"
+          type="button"
+          data-toggle-target="#navbarContent"
+          data-toggle-class="-translate-y-full"
+          aria-label="关闭导航"
+        >
+          {{ partial "heroicons/x-mark.html" }}
+        </button>
+      </div>
+      <ul class="flex flex-col gap-8 xl:flex-row xl:items-center">
+        {{ range site.Menus.main }}
+          <li class="text-center">
+            <a
+              class="text-primary hover:text-secondary text-base font-medium duration-300"
+              href="{{ if or (strings.HasPrefix .URL `http`) (strings.HasPrefix .URL `#`) }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+            >
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+      {{ if site.Menus.buttons }}
+        <ul class="flex flex-col gap-6 xl:flex-row xl:items-center">
+          {{ range site.Menus.buttons }}
+            <li class="text-center">
+              {{ partial "components/button/primary.html" (dict "label" .Name "href" (.URL | relLangURL)) }}
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </div>
+  </div>
+</nav>

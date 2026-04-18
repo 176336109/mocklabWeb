@@ -1,0 +1,10 @@
+enable: true
+
+title: "创业缺技术，企业转型难？"
+text: "面向初创团队，我们帮助你低成本搭建 MVP、验证业务；面向传统企业，我们在不推翻旧系统的前提下，落地 AI Agent、流程自动化与效率升级。"
+buttons:
+  - label: "了解技术陪跑"
+    url: "/services/technical-co-running/"
+  - label: "咨询企业 AI 方案"
+    url: "/services/agent-transformation/"
+image: "images/banner.png"

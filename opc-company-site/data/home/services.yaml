@@ -1,0 +1,25 @@
+enable: true
+
+title: "我们能直接帮你做什么"
+text: "不是空泛咨询，也不是交付完就离场。我们把产品判断、技术方案和实际落地放在同一个节奏里，帮助你更快看到结果。"
+cards:
+  - image: "images/service-1.png"
+    title: "MVP 快速搭建"
+    text: "围绕业务验证目标，拆出最小可上线版本，快速完成产品原型、核心功能与部署上线。"
+    button:
+      label: "看技术陪跑"
+      link: "/services/technical-co-running/"
+
+  - image: "images/service-2.png"
+    title: "AI Agent 与自动化"
+    text: "针对客服、销售、运营、内部协作等环节，设计能真正落进流程的 AI Agent 与自动化方案。"
+    button:
+      label: "看企业 AI"
+      link: "/services/agent-transformation/"
+
+  - image: "images/service-3.png"
+    title: "方案梳理与技术兜底"
+    text: "帮助你评估现有系统、明确实施路径、控制项目风险，让后续自建团队或持续迭代都更稳。"
+    button:
+      label: "联系咨询"
+      link: "/contact/"

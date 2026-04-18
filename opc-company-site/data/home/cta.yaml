@@ -1,0 +1,7 @@
+enable: true
+
+title: "已经有项目方向？先聊清楚目标、范围和落地路径"
+image: "images/call-to-action.png"
+button:
+  label: "留下联系方式"
+  link: "/contact/"

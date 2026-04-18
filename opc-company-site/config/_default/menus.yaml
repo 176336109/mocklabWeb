@@ -1,0 +1,32 @@
+main:
+  - name: "首页"
+    url: "/"
+    weight: 1
+  - name: "技术陪跑"
+    url: "/services/technical-co-running/"
+    weight: 2
+  - name: "企业 AI"
+    url: "/services/agent-transformation/"
+    weight: 3
+  - name: "联系我们"
+    url: "/contact/"
+    weight: 4
+
+buttons:
+  - name: "预约沟通"
+    url: "/contact/"
+    weight: 1
+
+footer:
+  - name: "首页"
+    url: "/"
+    weight: 1
+  - name: "技术陪跑"
+    url: "/services/technical-co-running/"
+    weight: 2
+  - name: "企业 AI"
+    url: "/services/agent-transformation/"
+    weight: 3
+  - name: "联系我们"
+    url: "/contact/"
+    weight: 4

@@ -1,33 +1,20 @@
 {
-  "name": "hugoplate",
-  "description": "hugo tailwindcss boilerplate",
-  "version": "3.4.5",
+  "name": "mocklab-opc-site",
+  "description": "Mocklab OPC company site powered by Hugo Up Business",
+  "version": "1.0.0",
   "license": "MIT",
-  "author": "zeon.studio",
   "scripts": {
-    "dev": "concurrently \"node themes/hugoplate/scripts/themeGenerator.js --watch\" \"..\\\\hugo.exe server\"",
-    "build": "node themes/hugoplate/scripts/themeGenerator.js && ..\\\\hugo.exe --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
-    "preview": "node themes/hugoplate/scripts/themeGenerator.js && ..\\\\hugo.exe server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
-    "dev:example": "concurrently \"node themes/hugoplate/scripts/themeGenerator.js --watch\" \"..\\\\hugo.exe server -s exampleSite\"",
-    "build:example": "cd exampleSite && node ../themes/hugoplate/scripts/themeGenerator.js && ..\\\\..\\\\hugo.exe --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
-    "preview:example": "cd exampleSite && node ../themes/hugoplate/scripts/themeGenerator.js && ..\\\\..\\\\hugo.exe server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
-    "update-modules": "node ./themes/hugoplate/scripts/clearModules.js && ..\\\\hugo.exe mod clean --all && ..\\\\hugo.exe mod get -u ./... && ..\\\\hugo.exe mod tidy",
-    "remove-darkmode": "node ./themes/hugoplate/scripts/removeDarkmode.js && yarn format",
-    "remove-multilang": "node ./themes/hugoplate/scripts/removeMultilang.js",
-    "project-setup": "node ./themes/hugoplate/scripts/projectSetup.js",
-    "theme-setup": "node ./themes/hugoplate/scripts/themeSetup.js",
-    "update-theme": "node ./themes/hugoplate/scripts/themeUpdate.js",
+    "dev": "..\\\\hugo.exe server --disableFastRender",
+    "build": "..\\\\hugo.exe --gc --minify",
+    "preview": "..\\\\hugo.exe server --disableFastRender -e production",
     "format": "prettier -w ."
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.1",
-    "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/typography": "^0.5.19",
-    "concurrently": "^9.2.1",
     "prettier": "^3.8.1",
     "prettier-plugin-go-template": "0.0.15",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwind-bootstrap-grid": "^7.0.0",
     "tailwindcss": "^4.2.1"
   }
 }

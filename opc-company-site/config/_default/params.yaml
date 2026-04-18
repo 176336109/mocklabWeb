@@ -1,0 +1,32 @@
+description: "创业技术陪跑与企业 AI 转型落地。面向初创团队提供 MVP 技术陪跑，面向传统企业提供 AI Agent 与流程自动化升级。"
+images:
+  - "images/banner.png"
+logo: "images/logo.png"
+favicon: "images/favicon.png"
+
+colors:
+  primary: "#0f766e"
+  secondary: "#ea580c"
+  tertiary: "#e0f2fe"
+
+location:
+  - "广西南宁"
+  - "支持远程协作与线下调研"
+
+contact:
+  - "callme@mocklab.cn"
+  - "项目咨询与方案评估"
+
+social:
+  dribbble: ""
+  instagram: ""
+  facebook: ""
+  twitter: ""
+
+copyright: "© 2025 南宁云游墨客网络科技有限公司. 保留所有权利。"
+
+compliance:
+  icp_text: "桂ICP备2021004762号"
+  icp_link: "https://beian.miit.gov.cn/"
+  public_security_text: "桂公网安备45010802000821"
+  public_security_link: "https://beian.mps.gov.cn/#/query/webSearch?code=45010802000821"

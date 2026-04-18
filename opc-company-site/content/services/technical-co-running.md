@@ -2,6 +2,7 @@
 title: "精益创业·技术陪跑"
 meta_title: "创业技术陪跑_MVP 快速开发_低成本 AI 技术兜底"
 description: "近 20 年资深产品经理 + 技术专家带队，用 AI 高效赋能开发，低成本为创业项目做技术陪跑，快速上线 MVP，不占股、不耗现金流，全程技术兜底。"
+image: "images/service-1.png"
 keywords:
   - "技术陪跑"
   - "初创项目技术支持"
