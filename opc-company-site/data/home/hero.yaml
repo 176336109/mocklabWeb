@@ -1,0 +1,10 @@
+enable: true
+
+title: "创业**缺技术**?<br>企业**转型难**?"
+text: "to创业者：我们帮你**快速建立MVP验证业务**、不占股、不养团队，精益创业<br>to传统企业：从了解你，到帮你**找到AI时代属于你的解**"
+buttons:
+  - label: "精益创业·技术陪跑"
+    url: "/services/technical-co-running/"
+  - label: "利旧顺势·AI转型"
+    url: "/services/agent-transformation/"
+image: "images/up-business/hero-image.png"

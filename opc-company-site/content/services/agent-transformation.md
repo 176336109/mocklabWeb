@@ -1,6 +1,7 @@
 ---
 title: "低成本让AI赋能企业"
 description: "不拆旧、不替换、低成本接入 AI，让现有 SaaS 和数据资产快速获得智能升级能力，稳住业务、补齐效率短板。"
+image: "images/service-2.png"
 date: 2026-04-17T00:00:00Z
 draft: false
 ---

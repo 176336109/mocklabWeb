@@ -1,0 +1,99 @@
+<!doctype html>
+{{ $pageLang := site.Language.Lang | default "zh-cn" }}
+{{ $pageTitle := "" }}
+{{ if .IsHome }}
+  {{ $pageTitle = site.Title }}
+{{ else if .Params.meta_title }}
+  {{ $pageTitle = .Params.meta_title }}
+{{ else if .Title }}
+  {{ $pageTitle = printf "%s | %s" .Title site.Title }}
+{{ else }}
+  {{ $pageTitle = site.Title }}
+{{ end }}
+{{ $pageDescription := site.Params.description }}
+{{ if .Description }}
+  {{ $pageDescription = .Description }}
+{{ else if .Params.description }}
+  {{ $pageDescription = .Params.description }}
+{{ end }}
+{{ $imagePath := "" }}
+{{ with .Params.image }}
+  {{ $imagePath = . }}
+{{ else }}
+  {{ if gt (len site.Params.images) 0 }}
+    {{ $imagePath = index site.Params.images 0 }}
+  {{ end }}
+{{ end }}
+<html lang="{{ $pageLang }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>{{ $pageTitle }}</title>
+    <meta name="description" content="{{ $pageDescription }}" />
+    <meta name="theme-color" content="{{ site.Params.colors.primary | default `#0f766e` }}" />
+    <link rel="canonical" href="{{ .Permalink }}" />
+
+    <meta property="og:site_name" content="{{ site.Title }}" />
+    <meta property="og:title" content="{{ $pageTitle }}" />
+    <meta property="og:description" content="{{ $pageDescription }}" />
+    <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ $pageTitle }}" />
+    <meta name="twitter:description" content="{{ $pageDescription }}" />
+
+    {{ with $imagePath }}
+      {{ with resources.Get (strings.TrimPrefix "/" .) }}
+        <meta property="og:image" content="{{ .Permalink }}" />
+        <meta name="twitter:image" content="{{ .Permalink }}" />
+      {{ end }}
+    {{ end }}
+
+    {{ with site.Params.favicon }}
+      {{ with resources.Get (strings.TrimPrefix "/" .) }}
+        <link rel="icon" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" />
+        <link rel="apple-touch-icon" href="{{ .Permalink }}" />
+      {{ end }}
+    {{ end }}
+
+    {{ with resources.Get "site.webmanifest" }}
+      <link rel="manifest" href="{{ .Permalink }}" />
+    {{ end }}
+
+    {{ range .AlternativeOutputFormats -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    {{ with resources.Get "css/styles.css" }}
+      {{ with resources.ExecuteAsTemplate "css/styles.css" $ . }}
+        {{ $opts := dict "inlineImports" true "optimize" true "minify" true }}
+        {{ with . | css.TailwindCSS $opts | fingerprint }}
+          <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ with resources.Get "css/fonts.css" }}
+      {{ with resources.ExecuteAsTemplate "css/fonts.css" $ . }}
+        {{ $opts := dict "inlineImports" true "optimize" true "minify" true }}
+        {{ with . | css.TailwindCSS $opts | fingerprint }}
+          <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ with resources.Get "js/main.js" }}
+      {{ $main := . | js.Build (dict "minify" true) | fingerprint }}
+      <script src="{{ $main.RelPermalink }}" defer></script>
+    {{ end }}
+  </head>
+  <body>
+    <div class="flex min-h-screen flex-col bg-white">
+      {{ partial "shared/header.html" . }}
+      <main class="grow">
+        {{ block "main" . }}{{ end }}
+      </main>
+      {{ partial "shared/footer.html" . }}
+    </div>
+  </body>
+</html>

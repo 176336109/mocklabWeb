@@ -1,0 +1,33 @@
+{{ if not .src }}
+  {{ errorf "utilities/image requires a src value" }}
+{{ end }}
+
+{{ $src := strings.TrimPrefix "/" .src }}
+{{ $resource := page.Resources.Get $src }}
+{{ if not $resource }}
+  {{ $resource = resources.Get $src }}
+{{ end }}
+{{ if not $resource }}
+  {{ errorf "utilities/image could not find %q" $src }}
+{{ end }}
+
+{{ $breakpoints := slice 576 768 992 1200 1400 }}
+{{ $srcset := slice }}
+{{ range $breakpoints }}
+  {{ if ge $resource.Width . }}
+    {{ $variant := $resource.Resize (printf "%dx webp" .) }}
+    {{ $srcset = append $srcset (slice (printf "%s %dw" $variant.RelPermalink $variant.Width)) }}
+  {{ end }}
+{{ end }}
+
+{{ $alt := .alt | default "" }}
+<img
+  src="{{ $resource.RelPermalink }}"
+  width="{{ $resource.Width }}"
+  height="{{ $resource.Height }}"
+  {{ with $srcset }}srcset="{{ delimit . `, ` }}"{{ end }}
+  {{ with .sizes }}sizes="{{ . }}"{{ end }}
+  {{ with .class }}class="{{ . }}"{{ end }}
+  alt="{{ $alt }}"
+  loading="{{ .loading | default `lazy` }}"
+/>
