@@ -82,4 +82,60 @@
   .home-feature-button {
     @apply text-center;
   }
+
+  .btn {
+    border-radius: 9999px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: all 0.25s ease;
+  }
+
+  .btn-primary,
+  .dark .btn-primary {
+    background: linear-gradient(135deg, #1ddad2 0%, #11bfb8 100%);
+    border-color: #0fa8a2;
+    color: #f6ffff;
+    box-shadow: 0 8px 20px rgba(17, 191, 184, 0.28);
+  }
+
+  .btn-primary:hover,
+  .dark .btn-primary:hover {
+    background: linear-gradient(135deg, #18c8c1 0%, #0ea59f 100%);
+    border-color: #0c8f8a;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(14, 165, 159, 0.34);
+  }
+
+  .btn-outline-primary,
+  .dark .btn-outline-primary {
+    border-color: rgba(29, 218, 210, 0.65);
+    color: #dffefd;
+    background: transparent;
+  }
+
+  .btn-outline-primary:hover,
+  .dark .btn-outline-primary:hover {
+    border-color: #18c8c1;
+    color: #021d1c;
+    background: linear-gradient(135deg, #1ddad2 0%, #11bfb8 100%);
+  }
+
+  .content strong,
+  .content b,
+  .section h1 strong,
+  .section h1 b,
+  .section h2 strong,
+  .section h2 b,
+  .section h3 strong,
+  .section h3 b,
+  .section p strong,
+  .section p b {
+    background: linear-gradient(135deg, #1ddad2 0%, #11bfb8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
 }

@@ -1,6 +1,6 @@
 baseURL = "/"
 title = "云游墨客"
-theme = "hugo-up-business"
+theme = "hugoplate"
 timeZone = "Asia/Shanghai"
 summaryLength = 20
 defaultContentLanguage = "zh-cn"
@@ -11,6 +11,111 @@ enableRobotsTXT = true
 [pagination]
 pagerSize = 6
 
+[outputs]
+home     = ["HTML", "RSS", "WebAppManifest", "SearchIndex"]
+
+[outputFormats]
+[outputFormats.WebAppManifest]
+mediaType = "application/manifest+json"
+rel = "manifest"
+
+[outputFormats.SearchIndex]
+mediaType = "application/json"
+baseName = "searchindex"
+isPlainText = true
+notAlternative = true
+
+[build]
+[build.buildStats]
+enable = true
+[[build.cachebusters]]
+source = 'assets/notwatching/hugo_stats\.json'
+target = 'css'
+
+[module]
+[[module.mounts]]
+source = 'assets'
+target = 'assets'
+[[module.mounts]]
+disableWatch = true
+source = 'hugo_stats.json'
+target = 'assets/notwatching/hugo_stats.json'
+
+[imaging]
+quality = 80
+resampleFilter = "Lanczos"
+
 [markup]
 [markup.goldmark.renderer]
 unsafe = true
+
+[markup.highlight]
+style = 'monokai'
+lineNumbersInTable = false
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 5
+ordered = true
+
+[mediaTypes]
+[mediaTypes."application/manifest+json"]
+suffixes = ["webmanifest"]
+
+############################# Plugins ##############################
+
+[[params.plugins.css]]
+link = "plugins/swiper/swiper-bundle.css"
+lazy = true
+
+[[params.plugins.css]]
+link = "plugins/glightbox/glightbox.css"
+lazy = true
+
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/brands.css"
+lazy = true
+
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/solid.css"
+lazy = true
+
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/icons.css"
+lazy = true
+
+[[params.plugins.js]]
+link = "js/search.js"
+lazy = false
+
+[[params.plugins.js]]
+link = "plugins/swiper/swiper-bundle.js"
+lazy = false
+
+[[params.plugins.js]]
+link = "plugins/glightbox/glightbox.js"
+lazy = true
+
+[[params.plugins.js]]
+link = "js/gallery-slider.js"
+lazy = true
+
+[[params.plugins.js]]
+link = "plugins/cookie.js"
+lazy = false
+
+[[params.plugins.js]]
+link = "js/accordion.js"
+lazy = true
+
+[[params.plugins.js]]
+link = "js/tab.js"
+lazy = true
+
+[[params.plugins.js]]
+link = "js/modal.js"
+lazy = true
+
+[[params.plugins.js]]
+link = "plugins/youtube-lite.js"
+lazy = true
